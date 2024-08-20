@@ -1,6 +1,6 @@
 import * as S from "./style"
 
-
+// github.com/johnicassere/lista-contatos-mod_32
 const Contato = () => {
     return (
             <S.Card>
@@ -12,7 +12,10 @@ const Contato = () => {
                     <input type="text" name="email" id='' placeholder="e-mail"/>
 
                     <label htmlFor=''>Telefone:</label>
-                    <input type="number" name="fone" id='' placeholder="Telefone"/>
+                    <input type="text" name="fone" id='' placeholder="Telefone"/>
+                    <button type="submit">
+                        Adicionar
+                    </button>
 
                 </S.FormAdd>
             </S.Card>
