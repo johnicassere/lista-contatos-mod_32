@@ -1,13 +1,16 @@
-import Contato from "../../components/Contato"
+import ListaDeContatos from "../../containers/ListaDeConatos"
 import Header from "../../components/Header"
+import { ContainerHome } from "./styles"
 
 
 const Home = () => {
     return (
-        <>
+     <>
         <Header/>
-        <Contato></Contato>
-        </>
+        <ContainerHome>
+            <ListaDeContatos/>
+        </ContainerHome>
+     </>
     )
 }
 

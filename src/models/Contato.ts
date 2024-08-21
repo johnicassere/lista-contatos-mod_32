@@ -1,11 +1,11 @@
 class Contato {
-    id: string
+    id: number
     nomeCompleto: string
     email: string
     fone: string
 
     constructor (
-        id: string,
+        id: number,
         nomeCompleto: string,
         email: string,
         fone: string

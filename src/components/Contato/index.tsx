@@ -1,23 +1,24 @@
+import { IoMdContact } from "react-icons/io";
 import * as S from "./style"
+import ContatoClass from '../../models/Contato'
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
-// github.com/johnicassere/lista-contatos-mod_32
-const Contato = () => {
+
+type Props = ContatoClass
+
+const Contato = ({ nomeCompleto, email, fone }: Props) => {
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+    
     return (
             <S.Card>
-                <S.FormAdd>
-                    <label htmlFor=''>Nome Completo:</label>
-                    <input type="text" name="nomeCompleto" id='' placeholder="Nome completo"/>
-
-                    <label htmlFor=''>e-mail:</label>
-                    <input type="text" name="email" id='' placeholder="e-mail"/>
-
-                    <label htmlFor=''>Telefone:</label>
-                    <input type="text" name="fone" id='' placeholder="Telefone"/>
-                    <button type="submit">
-                        Adicionar
-                    </button>
-
-                </S.FormAdd>
+                <S.Container>
+                    <IoMdContact className="icon-card" onClick={() => navigate('/edicao')}/>
+                    <h2>{nomeCompleto}</h2>
+                    <h3>{email}</h3>
+                    <h3>{fone}</h3>
+                </S.Container> 
             </S.Card>
     )
 }

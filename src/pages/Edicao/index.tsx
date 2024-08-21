@@ -1,7 +1,7 @@
 const Edicao = () => {
     return (
         <>
-            <h1>Edicão</h1>
+            <h1>Edicao</h1>
         </>
     )
 }

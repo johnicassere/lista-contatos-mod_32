@@ -3,32 +3,38 @@ import variaveis from "../../styles/variaveis";
 
 
 export const Card = styled.div`
-background-color: red;
-width: 480px;
+width: 490px;
+border-radius: 16px;
+border-bottom: solid 4px ${variaveis.blackColor};
+border-right: solid 4px ${variaveis.blackColor};
+padding: 20px;
+margin: 16px;
+
+
+&:hover{
+border: none;
+border-top: solid 2px ${variaveis.blackColor};
+border-left: solid 2px ${variaveis.blackColor};
+}
+
+.icon-card{
+    font-size: 38px;
+    cursor: pointer;
+}
+
 `
 
-export const FormAdd = styled.form`
+export const Container = styled.div`
 display: flex;
 flex-direction: column;
 
-label{
+h2{
     font-weight: bold;
     margin: 8px 0;
     text-align: center;
+    text-shadow: 1px 1px 1px ${variaveis.whiteColor};
 }
 
-input{
-    border: none;
-    border-bottom: 1px solid ${variaveis.blackColor};
-}
 
-button{
-    font-weight: bold;
-    margin: 16px 0;
-    text-align: center;
-    background-color: ${variaveis.blueColor};
-    padding: 8px;
-    border-radius: 8px;
-}
 
 `
