@@ -3,9 +3,7 @@ import variaveis from "../../styles/variaveis";
 
 
 export const Container = styled.div`
-max-width: 1024px;
-width: 100%;
-margin: auto;
+width: 80%;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -17,28 +15,27 @@ margin-top: 24px;
 margin-bottom: 40px;
 position: relative;
 
-a{
-    color: black;
+span{
+  font-weight: bold;
 }
-
 .react-icon{
    font-size: 48px;
    margin: 0 8px;
 }
 
-.btn-header{
-    position: absolute;
-    right: 10px;
-    bottom: 0;
+.react-icon-home{
+  cursor: pointer;
+  font-size: 48px;
+  margin: 0 8px;
+  color: ${variaveis.whiteColor};
+
+  &:hover{
+    color: ${variaveis.blackColor};
+  }
 }
 
 @media(max-width:768px){
   flex-direction: column;
-
-  .btn-header{
-    position: relative;
-    
-  }
 
   
 .react-icon{
@@ -47,6 +44,7 @@ a{
 }
 
 @media(max-width: 425px){
+    width: 100%;
     text-align: center;
 }
 

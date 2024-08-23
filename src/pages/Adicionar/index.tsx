@@ -1,11 +1,14 @@
-import Contato from "../../models/Contato"
+import Header from "../../components/Header"
+import Formulario from "../../containers/Formulario"
+
 
 
 const Adicionar = () => {
     return (
         <>
-        <h1>Adicionar</h1>
-        
+        <div><a href="/adicionar"></a></div>
+        <Header title="Adicionar Contato"/>
+        <Formulario/>
         </>
     )
 }

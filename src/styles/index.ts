@@ -1,7 +1,7 @@
 import styled, { createGlobalStyle } from "styled-components";
 import variaveis from "./variaveis";
 
-export const PaginaGlobal = createGlobalStyle`
+const PaginaGlobal = createGlobalStyle`
 *{
     margin: 0;
     padding: 0;
@@ -10,18 +10,22 @@ export const PaginaGlobal = createGlobalStyle`
     list-style: none;
     background-color: ${variaveis.grayColor};
     text-decoration: none;
-
-    #root{
-        display: flex;
-        justify-content: center;
-
-    }
 }
 `
 export const ContainerGlobal = styled.div`
-width: 1024px;
 display: flex;
-justify-content: center;
-align-items: center;
 flex-direction: column;
+align-items: center;
+
 `
+
+export const Campo = styled.input`
+    padding: 4px;
+    border: none;
+    border-radius: 4px;
+    border-bottom: 1px solid ${variaveis.blackColor};
+    margin-bottom: 12px;
+    outline: solid ${variaveis.grayColor}
+`
+
+export default PaginaGlobal

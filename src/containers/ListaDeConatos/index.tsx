@@ -3,7 +3,6 @@ import { RootReducer } from "../../store"
 import Contato from "../../components/Contato"
 
 
-
 const ListaDeContatos = () => {
 
     const { itens } = useSelector((state: RootReducer) => state.contatos)
@@ -11,7 +10,6 @@ const ListaDeContatos = () => {
     const contatos = itens
    
     return(
-        <>
         <ul>
             {contatos.map((c) => (
                 <li key={c.id}>
@@ -25,7 +23,7 @@ const ListaDeContatos = () => {
                 </li>
             ))}
         </ul>
-        </>
+
     )
 }
 

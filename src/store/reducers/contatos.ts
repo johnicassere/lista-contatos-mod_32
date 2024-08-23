@@ -10,7 +10,7 @@ const initialState: ContatosState = {
     itens: [
         {
             id: 1,
-            nomeCompleto:'Conato 1',
+            nomeCompleto:'Johni Cassere',
             email:'teste@teste.com',
             fone:'00 0 0000 0000'
         },
@@ -33,13 +33,14 @@ const initialState: ContatosState = {
             fone:'00 0 0000 0000'
         },
         {
-            id: 4,
+            id: 5,
             nomeCompleto:'Conato 5',
             email:'teste@teste.com',
             fone:'00 0 0000 0000'
         },
     ]
 }
+
 
 const contatoSlice = createSlice({
     name: 'contatos',
@@ -49,17 +50,23 @@ const contatoSlice = createSlice({
             state.itens = [
                 ...state.itens.filter((contato) => contato.id !== action.payload)
             ]
+
+            if(!state.itens.length){
+               return alert('Não há mais contatos')
+            }
+            
         },
         editar: (state, action: PayloadAction<Contato>) => {
-            const indexConatato = state.itens.findIndex((t) => t.id === action.payload.id)
+            const indexConatato = state.itens.findIndex((c) => c.id === action.payload.id)
             if(indexConatato >= 0){
                 state.itens[indexConatato] = action.payload
             }
+            
         },
         cadastrar: (state, action: PayloadAction<Omit<Contato,'id'>>) => {
             const contatoJaExiste = state.itens.find((contato) => contato.nomeCompleto.toUpperCase() === action.payload.nomeCompleto.toUpperCase())
             if(contatoJaExiste){
-                alert(`Já existe um conato com esse nome: ${contatoJaExiste}`)
+                alert('Já existe um conato com esse nome')
             }else{
                 const ultimoContato = state.itens[state.itens.length -1]
                 const contatoNovo = {

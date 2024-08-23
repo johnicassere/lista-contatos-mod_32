@@ -1,8 +1,9 @@
 export default {
     grayColor: '#aeb2b8',
     whiteColor: '#e1f7f7',
-    redColor:'#de0421',
+    redColor:'#d43f60',
     blueColor:'#4290f5',
-    orangeColor: '#f58442',
+    greenColor: '#078749',
+    orageColor:'#e39505',
     blackColor: '#000'
 }
